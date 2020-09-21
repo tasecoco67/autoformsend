@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 
+print("OK")
 driver = webdriver.Chrome()
 
 #driver.get("https://www.u-tokyo.ac.jp/ja/general/healthcheck.html")
@@ -29,5 +30,6 @@ driver.find_element_by_xpath("//input[@value='37.0度未満／Less than 37.0 deg
 ).click()
 time.sleep(5)
 driver.find_element_by_xpath("//input[@value='いいえ／No']").click()
+driver.find_element_by_class_name('office-form-bottom-button').click()
 
 #//*[@id="form-container"]/div/div/div/div/div[3]/div[3]/div[1]/button/div
