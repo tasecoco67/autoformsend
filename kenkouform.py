@@ -8,7 +8,7 @@ import time
 
 driver = webdriver.Chrome()
 
-driver.get("URL")
+driver.get("https://login.microsoftonline.com/common/oauth2/authorize?response_mode=form_post&response_type=id_token+code&scope=openid&msafed=0&nonce=0a059cdb-5603-4772-9a38-159a5b2d685f.637358340262336652&state=https%3a%2f%2fforms.office.com%2fPages%2fResponsePage.aspx%3fid%3dT6978HAr10eaAgh1yvlMhF__kSldrNpNvIWhwdsjjRJURUZEVjlIWjM1VjhXMlVaRVJaWVpEVjJZVCQlQCN0PWcu&client_id=c9a559d2-7aab-4f13-a6ed-e7e9c52aec87&redirect_uri=https%3a%2f%2fforms.office.com%2fauth%2fsignin&sso_reload=true")
 time.sleep(2)
 driver.find_element_by_xpath(r"//*[@id='i0116']").send_keys("MAIL_ADDRESS")
 driver.find_element_by_xpath(r"//*[@id='idSIButton9']").click()
