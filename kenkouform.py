@@ -8,12 +8,12 @@ import time
 
 driver = webdriver.Chrome()
 
-driver.get(setting.URL)
+driver.get(URL)
 time.sleep(2)
-driver.find_element_by_xpath(r"//*[@id='i0116']").send_keys(setting.MAIL)
+driver.find_element_by_xpath(r"//*[@id='i0116']").send_keys(MAIL_ADDRESS)
 driver.find_element_by_xpath(r"//*[@id='idSIButton9']").click()
 time.sleep(3)
-driver.find_element_by_name("Password").send_keys(setting.PSW)
+driver.find_element_by_name("Password").send_keys(UTOKYO_PSW)
 time.sleep(1)
 driver.find_element_by_xpath(r"//*[@id='submitButton']").click()
 time.sleep(1)
@@ -24,7 +24,7 @@ import datetime
 weekday = datetime.date.today().weekday()
 if str(weekday) == "0"or"1"or"2"or"3"or"4":
     driver.find_element_by_xpath("//input[@value='本郷地区／Hongo Area']").click()
-driver.find_element_by_class_name('office-form-question-textbox').send_keys("農学部三号館")
+driver.find_element_by_class_name('office-form-question-textbox').send_keys(PLACE_NAME)
 driver.find_element_by_xpath("//input[@value='37.0度未満／Less than 37.0 degrees Celsius']"
 ).click()
 time.sleep(3)
